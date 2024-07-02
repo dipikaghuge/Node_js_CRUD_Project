@@ -1,0 +1,11 @@
+const route = require('express').Router();
+const controllercrudOperation = require('../controller/crudOperation');
+
+route.post('/add/user',controllercrudOperation.addUser);
+route.get('/users/:Id',controllercrudOperation.findUser);
+route.put('/update/user/:Id',controllercrudOperation.updateUser);
+route.delete('/delete/user/:Id',controllercrudOperation.deleteUser);
+
+module.exports = route;
+
+//http://192.168.167.82:4005/add/user
